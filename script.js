@@ -51,6 +51,8 @@ getMoney(userData, bankData)
                     console.log(`Введенная сумма больше допустимой. Максимальная сумма снятия: ${bankData.bankData[i].max} ${i}`);
                 } else if (summ < bankData.bankData[i].min) {
                     console.log(`Введенная сумма меньше допустимой. Минимальная сумма снятия: ${bankData.bankData[i].min} ${i}`);
+                } else if (summ > userData[i]) {
+                    console.log(`У вас недостаточно денег. Сумма снятия: ${userData[i]}`)
                 } else {
                     console.log(`Вот Ваши денежки ${summ} ${i} ${bankData.bankData[i].img}`);
                 };
